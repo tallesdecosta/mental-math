@@ -1,0 +1,156 @@
+:root {
+ --background-color: #fff;
+ --primary-color: #6002ee;
+ --border: 1px solid #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/inter-v13-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Basis';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/BasisGrotesqueArabicPro-Regular.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* montserrat-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Basis';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/BasisGrotesqueArabicPro-Bold.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+h1, h2, p, input, button, label {
+    font-family: 'Basis';
+    color: var(--primary-color);
+}
+
+body {
+    height: 100dvh;
+    grid-template-rows: 1fr auto;
+    background-color: var(--background-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main, header, footer {
+  padding: 1rem 1.5rem;
+}
+
+footer {
+  gap: 2rem;
+  align-items: center;
+
+}
+
+article, section {
+  padding: 2rem 2rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+header {
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+main {
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 1.5rem;
+}
+
+button, input {
+  background-color: var(--background-color);
+  padding: 0.5rem 0.7rem;
+  border: var(--border);
+}
+
+.big-heading-span {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.display-grid {
+  display: grid;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.selector-wrapper {
+  gap: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.card-box, .tips-box {
+  border: var(--border);
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #121212;
+    --primary-color: #fff;
+    --border: 1px solid #fff;
+  }
+}

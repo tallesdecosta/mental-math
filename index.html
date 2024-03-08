@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mental Math</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="icon" href="img/favicon.ico" sizes="48x48" >
+    </head>
+    <body class="display-grid" id="body">
+        <main class="display-flex" id="main">
+            <header class="display-flex menu-content" id="header">
+                <h1 class="menu-content">Mental Math, <span class="big-heading-span menu-content">a place for you to finally end that math-phobia you have.</span></h1>
+                <button id="tips-button"><p>Tips</p></button>
+            </header>
+            <article id="tips-box" class="tips-box hidden">
+                <h2>WIP</h2>
+                <p>Soon we'll have incredible math tips. 
+                </p>
+                <button id="menu-button-simple"><p>Back to Menu</p></button>
+            </article>
+            <article class="display-flex menu-content">
+                <h2 class="menu-content">Here, choose your learning mode.</h2>
+                <div class="display-flex selector-wrapper menu-content">
+                    <button id="enumerated-button">
+                        <p>Enumerated</p>
+                    </button>
+                    <button id="endless-button">
+                        <p>Endless</p>
+                    </button>
+                </div>
+            </article>
+            <section class="card-box display-flex hidden" id="card-box">
+                <form class="display-flex" action="javascript:;" onsubmit="SendQuestionAmount();">
+                    <label class="hidden" id="questions-number-text" for="">How many questions you want to do?</label>
+                    <input class="hidden" value="10" type="number" id="questions-number">
+                    <input class="hidden" placeholder="OK" type="submit" id="ok-button">
+                </form>
+
+                    <p class="hidden" id="total-questions"></p>
+                    <p class="hidden">Want to try again?</p>
+                    <button class="hidden" id="restart-button"><p>Restart</p></button>
+                    <button class="hidden" id="menu-button"><p>Back to Menu</p></button>
+                    <p class="hidden" id="question-number-text">Question 1</p>
+                    <p class="hidden" id="calculation-text">1</p>
+                    <input class="hidden" type="number" id="player-answer">
+                    <input class="hidden" type="submit" id="submit-button">
+                    <button class="hidden" id="stop-button"><p>Stop Here</p></button>
+            </section>
+        </main>
+        <footer class="display-flex">
+            <a href="https://github.com/talles-dacosta">
+                <picture>
+                    <source srcset="img/github-dark.svg" media="(prefers-color-scheme: dark)" alt="github link">
+                    <img src="img/github-light.svg" alt="github link">
+                </picture>
+            </a>
+        </footer>
+    </body>
+    <script src="scripts/script.js"></script>
+</html>
