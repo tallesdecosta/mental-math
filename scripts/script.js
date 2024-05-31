@@ -41,8 +41,6 @@ let isEndless = false;
 let questionNumber = 1;
 let playerTotal = 0;
 
-
-
 function BackToMenuComplex () {
   isEndless = false;
   tipsBox.classList.add("hidden");
