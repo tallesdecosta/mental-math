@@ -13,10 +13,20 @@
                 <h1 class="menu-content">Mental Math, <span class="big-heading-span menu-content">a place for you to finally end that math-phobia you have.</span></h1>
                 <button id="tips-button"><p>Tips</p></button>
             </header>
-            <article id="tips-box" class="tips-box hidden">
-                <h2>WIP</h2>
-                <p>Soon we'll have incredible math tips. 
-                </p>
+            <article id="tips-menu" class="tips-menu hidden display-flex">
+                <p>Touch or click on the tip that you want to see. To see more tips, slide/scroll down.</p>
+                <section class="tips-wrapper">
+                    <article onclick="DisplayTip(this.id)" id="1" class="tip-wrapper">
+                        <h3>2 digit number multiplication</h3>
+                        <p>How to easily do multiplications like 22x58.</p>
+                    </article>
+
+                    <article onclick="DisplayTip(this.id)" id="2" class="tip-wrapper">
+                        <h3>example</h3>
+                        <p>example</p>
+                    </article>
+                    
+                </section>
                 <button id="menu-button-simple"><p>Back to Menu</p></button>
             </article>
             <article class="display-flex menu-content">
@@ -49,7 +59,7 @@
             </section>
         </main>
         <footer class="display-flex">
-            <a href="https://github.com/talles-dacosta">
+            <a href="https://github.com/tallesdecosta">
                 <picture>
                     <source srcset="img/github-dark.svg" media="(prefers-color-scheme: dark)" alt="github link">
                     <img src="img/github-light.svg" alt="github link">
@@ -58,4 +68,5 @@
         </footer>
     </body>
     <script src="scripts/script.js"></script>
+    <script src="scripts/tips.js"></script>
 </html>

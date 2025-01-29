@@ -7,10 +7,11 @@ const calculation = document.getElementById("calculation-text");
 const questionText = document.getElementById("question-number-text");
 const questionsNumberText = document.getElementById("questions-number-text");
 const questionAmountInput = document.getElementById("questions-number");
-const tipsBox = document.getElementById('tips-box');
+const tipsBox = document.getElementById('tips-menu');
 
 const okButton = document.getElementById("ok-button");
 //okButton.addEventListener("click", SendQuestionNumber);
+
 
 const enumeratedButton = document.getElementById("enumerated-button");
 enumeratedButton.addEventListener("click", ChooseQuestionAmount);
@@ -100,6 +101,35 @@ function GoToTips () {
   tipsBox.classList.remove("hidden");
   body.style.gridTemplateRows = "1fr auto";
   
+
+}
+
+function DisplayTip (id) {
+
+  tipObject = tipsData[parseInt(id)];
+  
+  tipWrapper = document.createElement("div");
+  tipWrapper.classList.add("tip-page");
+
+  tipTitle = document.createElement("h2");
+  tipTitle.textContent = tipObject.title;
+
+  tipWrapper.appendChild(tipTitle);
+
+  tipText = document.createElement("p");
+  tipText.textContent = tipObject.text;
+
+  tipWrapper.appendChild(tipText);
+
+  tipButton = document.createElement("button");
+  tipButton.textContent = "Voltar";
+  tipButton.addEventListener("click", () => {
+    tipButton.parentNode.remove();
+  });
+
+  tipWrapper.appendChild(tipButton);
+
+  main.appendChild(tipWrapper);
 
 }
 

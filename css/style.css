@@ -46,7 +46,7 @@
     src: url('../fonts/BasisGrotesqueArabicPro-Bold.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
-h1, h2, p, input, button, label {
+h1, h2, h3, p, input, button, label {
     font-family: 'Basis';
     color: var(--primary-color);
 }
@@ -147,11 +147,32 @@ button, input {
   flex-direction: column;
 }
 
-.card-box, .tips-box {
+.card-box, .tips-menu, .tip-page {
   max-width: 300px;
   border: var(--border);
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.tip-page {
+  display: flex;
+  position: absolute;
+  background-color: var(--background-color);
+  padding-block: 6rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.tip-page > p {
+
+  max-width: 240px;
+
+}
+
+.tips-wrapper {
+  overflow: scroll;
+  max-height: 250px;
+
 }
 
 @media (prefers-color-scheme: dark) {
