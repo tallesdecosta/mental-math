@@ -7,6 +7,7 @@ const calculation = document.getElementById("calculation-text");
 const questionText = document.getElementById("question-number-text");
 const questionsNumberText = document.getElementById("questions-number-text");
 const questionAmountInput = document.getElementById("questions-number");
+
 const tipsBox = document.getElementById('tips-menu');
 
 const okButton = document.getElementById("ok-button");
